@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #20476b;
+}
+
+h2 {
+    font-size: 30px;
+    color: #2060a8;
+}
+
+body {
+    background-color: rgb(180, 216, 228);
+    width: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+canvas {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+}
+
+input {
+    width: 70px;
+}
+
+.titulo {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.flexColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.interaccion {
+    margin: auto;
+    border: 2px solid #44586b;
+    width: 955px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.inputSpacing {
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.columna {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.parrafo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    width: 343px;
+    background-color: #d4eaff;
+    border-radius: 5px;
+    border: 1px solid #d4eaff;
+    text-align: justify;
+    padding: 15px;
+}
+
+.parrafo2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    background-color: #d4eaff;
+    border-radius: 5px;
+    border: 1px solid #d4eaff;
+    text-align: justify;
+    padding: 15px;
+}
+
+.boton2 {
+    font-family: Arial, cursive;
+    font-size: 15px;
+    color: black;
+    background-color: #d4eaff;
+    border-radius: 5px;
+    border: 1px solid #d4eaff;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton {
+    font-family: Arial, cursive;
+    font-size: 30px;
+    color: #d4eaff;
+    background-color: #000000;
+    border-radius: 10px;
+    border: 1px solid #d4eaff;
+    display: inline-block;
+    width: 50%;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boton:hover {
+    color: rgb(0, 0, 255);
+    background-color: #d4eaff;
+    text-decoration: none;
+}
+
+.canvas {
+    margin: auto;
+    padding: 15px;
+    height: 600px;
+    width: 600px;
+}
+
+#todo {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 725px;
+}
+
+#resultado {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}

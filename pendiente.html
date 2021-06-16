@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculo de Areas</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+    <meta name="author" content="Mariano Nallar">
+    <meta name="description" content="Calculo de pendiente">
+    <meta name="keywords" content="html, Calculado, Pendiente">
+</head>
+
+
+<div class="interaccion">
+    <div>
+        <p class="text">Ingrese dos puntos de la recta en R2, el resultado obtenido será el valor de la pendiente.</p>
+        <div class="inputSpacing">
+            <label for="X1">X1: </label>
+            <input type="text" name="X1" id="X1" onchange="verificarinput(this.id)">
+        </div>
+
+        <div class="inputSpacing">
+            <label for="Y1">Y1: </label>
+            <input type="text" name="Y1" id="Y1" onchange="verificarinput(this.id)">
+        </div>
+
+        <div class="inputSpacing">
+            <label for="X2">X2: </label>
+            <input type="text" name="X2" id="X2" onchange="verificarinput(this.id)">
+        </div>
+
+        <div class="inputSpacing">
+            <label for="Y2">Y2: </label>
+            <input type="text" name="Y2" id="Y2" onchange="verificarinput(this.id)">
+        </div>
+    </div>
+
+    <div>
+        <a onclick="calcular();" id="calcu" class="boton2 inputSpacing">Calcular!</a>
+        <a onclick="resetInputs();" class="boton2 inputSpacing">Resetear</a>
+        <output id="resultado" class="inputSpacing"></output>
+    </div>
+
+    <div class="canvas">
+        <canvas id="myCanvas" height="600" width="600">
+            Tu navegador no soporta el tag de HTML5 canvas.
+        </canvas>
+    </div>
+</div>
+
+
+</html>
