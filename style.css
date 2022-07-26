@@ -13,10 +13,16 @@ h2 {
 body {
     background-color: rgb(180, 216, 228);
     width: 100%;
+    overflow: hidden
 }
 
 header {
     text-align: center;
+}
+
+article{
+    text-align: center;
+    text-indent:0 ;
 }
 
 canvas {
@@ -67,6 +73,13 @@ input {
     flex-direction: column;
 }
 
+.columna2 {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
 .parrafo {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -109,10 +122,9 @@ input {
     border-radius: 10px;
     border: 1px solid #d4eaff;
     display: inline-block;
-    width: 50%;
     padding: 10px 24px;
     text-decoration: none;
-    text-align: center;
+    margin-top: 20px;
 }
 
 .boton:hover {

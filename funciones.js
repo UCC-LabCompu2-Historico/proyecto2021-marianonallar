@@ -21,13 +21,19 @@ function resetInputs() {
  * @method verificarinput
  * @param id
  */
-function verificarinput(id) {
-    let v = document.getElementById(id).value;
+ function verificarinput(id) {
+    let  v = document.getElementById(id).value;
+    let k = 0;
     if (isNaN(v)) {
         alert("Se ingreso un valor invalido en " + id);
         document.getElementById(id).value = "";
     }
-    if (v > 250 || v < -250) {
+    if (v < 0.01 && v > 0){
+    alert("El numero es demasiado pequeño");
+        document.getElementById(id).value = "";
+    }
+    if (v > 250 || v < -250)
+    {
         alert("Solo se admiten valores desde -250 hasta 250");
         document.getElementById(id).value = "";
     }
@@ -65,6 +71,7 @@ function calcular() {
     clearInterval(inter);
 
     dibujarEjes();
+    escribirEjes();
     dibujarPuntos(x1, y1, x2, y2);
     dibujarPendiente(x1, y1, x2, y2, pendiente);
 }
@@ -93,6 +100,31 @@ function dibujarEjes() {
     ctx.stroke();
 }
 
+/**
+ * Escribe los ejes x e y. Los numera
+ * @method escribirEjes
+ */
+
+ function escribirEjes() {
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+
+    ctx.font = '20px serif';
+    ctx.fillStyle = "black";
+    ctx.fillText('x', 570, 320);
+    ctx.fillText('y', 280, 70);
+    ctx.fillText('100', 383, 320);      //x
+    ctx.fillText('200', 466, 320);      //x
+    ctx.fillText('-100', 217, 320);      //x
+    ctx.fillText('-200', 134, 320);      //x
+    ctx.fillText('100', 320, 217);
+    ctx.fillText('200', 320, 134);
+    ctx.fillText('-100', 320, 383);
+    ctx.fillText('-200', 320, 466);
+
+  }
+
+  
 /**
  * Dibuja los puntos ingresados, se traducen las coordenadas cartesianas a las del canvas
  * @method dibujarPuntos
