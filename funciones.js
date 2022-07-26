@@ -166,7 +166,7 @@ function dibujarPuntos(x1, y1, x2, y2) {
  * @param y2 coordenada en y del punto 2 representada como un número
  * @param pendiente calculada como (y2 - y1) / (x2 - x1)
  */
-function dibujarPendiente(x1, y1, x2, y2, pendiente) {
+ function dibujarPendiente(x1, y1, x2, y2, pendiente) {
     let c = document.getElementById("myCanvas");
     let ctx = c.getContext("2d");
 
@@ -176,16 +176,18 @@ function dibujarPendiente(x1, y1, x2, y2, pendiente) {
     let l = 0;
     // Se ejecuta con un intervalo de 1000/35 ms
     inter = setInterval(function() {
-        // Se dibuja hasta que el incremento supere la distancia entre x1 y x2
-        if(Math.abs(l) < Math.abs(x2-x1)) {
+        // Se dibuja hasta que el incremento llegue al limite de los ejes
+        var limitex = x2>x1 ? Math.abs(550-(x1+300)) : Math.abs(50-(x1+300));
+        var limitey = pendiente>0 ? Math.abs(50-(300-y1)) : Math.abs(550-(300-y1))
+        if((Math.abs(l) < limitex) && (Math.abs(l*pendiente) < limitey)) {
             // Si el segundo punto esta a la izquierda del primero se debe decrementar, si no se incrementa
             if(x2<x1)
                 l--;
             else
                 l++;
             ctx.beginPath();
-            ctx.moveTo(x1+300, 300-y1);
-            ctx.lineTo(x1+300+l, 300-y1-l*pendiente);
+            ctx.moveTo(x1+300, 300-y1);                      // 100, 200 --> 400, 100
+            ctx.lineTo(x1+300+l, 300-y1-l*pendiente);        //-l*pendiente
             ctx.stroke();
         }
         else
