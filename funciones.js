@@ -113,18 +113,18 @@ function dibujarEjes() {
     ctx.fillStyle = "black";
     ctx.fillText('x', 570, 320);
     ctx.fillText('y', 280, 70);
-    ctx.fillText('100', 383, 320);      //x
-    ctx.fillText('200', 466, 320);      //x
-    ctx.fillText('-100', 217, 320);      //x
-    ctx.fillText('-200', 134, 320);      //x
-    ctx.fillText('100', 320, 217);
-    ctx.fillText('200', 320, 134);
-    ctx.fillText('-100', 320, 383);
-    ctx.fillText('-200', 320, 466);
+    ctx.fillText('100', 390, 320);      //x
+    ctx.fillText('200', 490, 320);      //x
+    ctx.fillText('-100', 190, 320);      //x
+    ctx.fillText('-200', 90, 320);      //x
+    ctx.fillText('100', 320, 205);
+    ctx.fillText('200', 320, 110);
+    ctx.fillText('-100', 320, 410);
+    ctx.fillText('-200', 320, 520);
 
   }
 
-  
+
 /**
  * Dibuja los puntos ingresados, se traducen las coordenadas cartesianas a las del canvas
  * @method dibujarPuntos
