@@ -178,7 +178,12 @@ function dibujarPuntos(x1, y1, x2, y2) {
     inter = setInterval(function() {
         // Se dibuja hasta que el incremento llegue al limite de los ejes
         var limitex = x2>x1 ? Math.abs(550-(x1+300)) : Math.abs(50-(x1+300));
-        var limitey = pendiente>0 ? Math.abs(50-(300-y1)) : Math.abs(550-(300-y1))
+        let limitey;
+        if ((x2>x1 && pendiente>0) || (x2<x1 && pendiente<0)){
+            limitey = Math.abs(50-(300-y1));
+          } else {
+            limitey = Math.abs(550-(300-y1));
+          }
         if((Math.abs(l) < limitex) && (Math.abs(l*pendiente) < limitey)) {
             // Si el segundo punto esta a la izquierda del primero se debe decrementar, si no se incrementa
             if(x2<x1)
@@ -190,7 +195,8 @@ function dibujarPuntos(x1, y1, x2, y2) {
             ctx.lineTo(x1+300+l, 300-y1-l*pendiente);        //-l*pendiente
             ctx.stroke();
         }
-        else
+        else{                 
             clearInterval(inter)
+        }
     }, 1000 / 35)
 }
