@@ -13,6 +13,7 @@ function resetInputs() {
     document.getElementById("Y1").value = "";
     document.getElementById("Y2").value = "";
     document.getElementById("resultado").innerHTML = "";
+    clearInterval(inter)
 }
 
 /**
