@@ -4,4 +4,4 @@
 ####  :black_circle: Tecnologías: 1.HTML
 ####                            2.CSS 
 ####                              3.JS
-#### Pagina de pendiente: https://ucc-labcompu2.github.io/proyecto2021-marianonallar/index.html
+#### Pagina de pendiente: https://ucc-labcompu2-historico.github.io/proyecto2021-marianonallar/index.html
